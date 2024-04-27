@@ -17,7 +17,7 @@
             {{-- ini tombol login --}}
             <div>
                 <button wire:click="authenticate" class="bg-blue-400 w-full py-2 rounded-md text-white font-bold">
-                    Login
+                    Masuk
                 </button>
             </div>
             {{-- ini akhir tombol login --}}
