@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\Pasien\DashboardController;
 use App\Livewire\Login;
+use App\Livewire\Pasien\Dashboard as PasienDashboard;
 use App\Livewire\Register;
 use Illuminate\Support\Facades\Route;
 
@@ -20,4 +20,4 @@ Route::view('/', 'welcome')->name('home');
 Route::get('/login', Login::class);
 Route::get('/register', Register::class);
 
-Route::get('/pasien/dashboard', [DashboardController::class, 'index']);
+Route::get('/pasien/dashboard', PasienDashboard::class);
