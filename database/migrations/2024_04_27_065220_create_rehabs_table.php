@@ -17,9 +17,6 @@ return new class extends Migration
             $table->date('rehab_date')->nullable();
             $table->string('height')->nullable();
             $table->string('weight')->nullable();
-            $table->string('sudut');
-            $table->string('tekanan_depan');
-            $table->string('tekanan_belakang');
             $table->timestamps();
         });
     }

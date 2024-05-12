@@ -22,6 +22,9 @@
                         Monitoring Pasien
                     </div>
                 </div>
+                <div class="bg-black w-fit mx-4">
+                    Izah
+                </div>
             </div>
         </div>
         <div class="w-full lg:w-10/12 flex flex-col">
