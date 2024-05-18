@@ -63,6 +63,15 @@
                                         <td class="border border-gray-300 px-4 py-2 font-bold text-gray-500">Tanggal Rehab</td>
                                         <td class="border border-gray-300 px-4 py-2">30 April 2024</td>
                                     </tr>
+                                    <tr>
+                                        <td class="border border-gray-300 px-4 py-2 font-bold text-gray-500">Tinggi Badan</td>
+                                        <td class="border border-gray-300 px-4 py-2">30 April 2024</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-gray-300 px-4 py-2 font-bold text-gray-500">Berat Badan</td>
+                                        <td class="border border-gray-300 px-4 py-2">30 April 2024</td>
+                                    </tr>
+                                    
                                 </tbody>
                             </table>
                         </div>
