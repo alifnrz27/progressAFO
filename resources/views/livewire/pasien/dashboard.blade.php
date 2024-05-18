@@ -49,27 +49,39 @@
                                 <tbody>
                                     <tr>
                                         <td class="border border-gray-300 px-4 py-2 font-bold text-gray-500">No Rekam Medis</td>
-                                        <td class="border border-gray-300 px-4 py-2">1</td>
+                                        <td class="border border-gray-300 px-4 py-2">
+                                            <input type="text" class="w-full border-0">
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td class="border border-gray-300 px-4 py-2 font-bold text-gray-500">Nama</td>
-                                        <td class="border border-gray-300 px-4 py-2">Rudi</td>
+                                        <td class="border border-gray-300 px-4 py-2">
+                                            <input type="text" class="w-full border-0">
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td class="border border-gray-300 px-4 py-2 font-bold text-gray-500">Tanggal Lahir</td>
-                                        <td class="border border-gray-300 px-4 py-2">3 Juni 1993</td>
+                                        <td class="border border-gray-300 px-4 py-2">
+                                            <input type="text" class="w-full border-0">
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td class="border border-gray-300 px-4 py-2 font-bold text-gray-500">Tanggal Rehab</td>
-                                        <td class="border border-gray-300 px-4 py-2">30 April 2024</td>
+                                        <td class="border border-gray-300 px-4 py-2">
+                                            <input type="text" class="w-full border-0">
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td class="border border-gray-300 px-4 py-2 font-bold text-gray-500">Tinggi Badan</td>
-                                        <td class="border border-gray-300 px-4 py-2">165 cm</td>
+                                        <td class="border border-gray-300 px-4 py-2">
+                                            <input type="text" class="w-full border-0">
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td class="border border-gray-300 px-4 py-2 font-bold text-gray-500">Berat Badan</td>
-                                        <td class="border border-gray-300 px-4 py-2">60kg</td>
+                                        <td class="border border-gray-300 px-4 py-2">
+                                            <input type="text" class="w-full border-0">
+                                        </td>
                                     </tr>
                                     
                                 </tbody>
@@ -79,8 +91,16 @@
                             Submit
                         </button>
                         <p id="timer"></p>
-                        <div>
-                            <canvas id="myChart"></canvas>
+                        <div class="grid grid-cols-3">
+                            <div>
+                                <canvas id="Sudut"></canvas>
+                              </div>
+                            <div>
+                                <canvas id="FSR-TOE"></canvas>
+                            </div>
+                            <div>
+                                <canvas id="FSR-HEEL"></canvas>
+                            </div>
                           </div>
                     </div>
                 </div>
@@ -117,14 +137,52 @@
           }
         }, 1); // Update every millisecond
     }
-    const ctx = document.getElementById('myChart');
+    const ctx1 = document.getElementById('Sudut');
+    const ctx2 = document.getElementById('FSR-TOE');
+    const ctx3 = document.getElementById('FSR-HEEL');
 
-  new Chart(ctx, {
+  new Chart(ctx1, {
     type: 'line',
     data: {
       labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
       datasets: [{
-        label: '# of Votes',
+        label: 'Sudut',
+        data: [12, 19, 3, 5, 2, 3],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+  new Chart(ctx2 , {
+    type: 'line',
+    data: {
+      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      datasets: [{
+        label: 'FSR TOE',
+        data: [12, 19, 3, 5, 2, 3],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+  new Chart(ctx3, {
+    type: 'line',
+    data: {
+      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      datasets: [{
+        label: 'FSR HEEL',
         data: [12, 19, 3, 5, 2, 3],
         borderWidth: 1
       }]
