@@ -16,6 +16,8 @@
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 
         {{-- @vite(['resources/sass/app.scss', 'resources/js/app.js']) --}}
         @livewireStyles

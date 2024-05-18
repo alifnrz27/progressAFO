@@ -22,9 +22,6 @@
                         Monitoring Pasien
                     </div>
                 </div>
-                <div class="bg-black w-fit mx-4">
-                    Izah
-                </div>
             </div>
         </div>
         <div class="w-full lg:w-10/12 flex flex-col">
@@ -69,9 +66,66 @@
                                 </tbody>
                             </table>
                         </div>
+                        <button class="btn bg-blue-600 text-white p-1 rounded" onclick="onSubmit()">
+                            Submit
+                        </button>
+                        <p id="timer"></p>
+                        <div>
+                            <canvas id="myChart"></canvas>
+                          </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    const onSubmit = () => {
+        // Set the countdown duration in milliseconds (5 minutes)
+        const countdownDuration = 15 * 60 * 1000;
+        
+        // Calculate the target time by adding the countdown duration to the current time
+        const targetTime = new Date().getTime() + countdownDuration;
+        
+        // Update the countdown every millisecond
+        const timerInterval = setInterval(() => {
+          const now = new Date().getTime();
+          const distance = targetTime - now;
+        
+          // Calculate remaining time in minutes, seconds, and milliseconds
+          const minutes = Math.floor(distance / (1000 * 60));
+          const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+          const milliseconds = Math.floor((distance % 1000));
+        
+          // Display the countdown
+          document.getElementById('timer').innerHTML = `${minutes}m ${seconds}s`;
+        
+          // If the countdown is over, stop the timer
+          if (distance < 0) {
+            clearInterval(timerInterval);
+            document.getElementById('timer').innerHTML = 'Countdown expired';
+          }
+        }, 1); // Update every millisecond
+    }
+    const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      datasets: [{
+        label: '# of Votes',
+        data: [12, 19, 3, 5, 2, 3],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>

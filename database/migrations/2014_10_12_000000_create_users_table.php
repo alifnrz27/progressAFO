@@ -17,7 +17,8 @@ return new class extends Migration
             $table->string('role'); // admin, pasien
             $table->string('email')->unique();
             $table->date('birth_date')->nullable();
-            $table->string('no_rekam_medis')->nullable();
+            $table->string('phone_number')->nullable();
+            $table->string('medical_record_number')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

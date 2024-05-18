@@ -29,11 +29,12 @@
 
                     {{-- ini untuk form email password --}}
                     <div class="py-4">
-                        <input wire:model.lazy="name" type="text" class="w-full border-2 rounded-md h-10 px-4 mb-4" placeholder="Masukkan Nama">
-                        <input wire:model.lazy="email" type="email" class="w-full border-2 rounded-md h-10 px-4 mb-4" placeholder="Masukkan Email">
-                        <input wire:model.lazy="birth_date" type="date" class="w-full border-2 rounded-md h-10 px-4 mb-4" placeholder="Masukkan Tanggal Lahir">
-                        <input wire:model.lazy="no_rekam_medis" type="text" class="w-full border-2 rounded-md h-10 px-4 mb-4" placeholder="Masukkan No Rekam Medis">
-                        <input wire:model.lazy="password" type="password" class="w-full border-2 rounded-md h-10 px-4" placeholder="Masukkan Password">
+                        <input wire:model.lazy="name" type="text" class="w-full border-2 rounded-md h-10 px-4 mb-4" placeholder="Insert Name">
+                        <input wire:model.lazy="email" type="email" class="w-full border-2 rounded-md h-10 px-4 mb-4" placeholder="Insert Email">
+                        <input wire:model.lazy="birth_date" type="date" class="w-full border-2 rounded-md h-10 px-4 mb-4" placeholder="Insert Birth Date">
+                        <input wire:model.lazy="phone_number" type="text" class="w-full border-2 rounded-md h-10 px-4 mb-4" placeholder="Insert Phone_number">
+                        <input wire:model.lazy="medical_record_number" type="text" class="w-full border-2 rounded-md h-10 px-4 mb-4" placeholder="Insert Medical_Record_Number">
+                        <input wire:model.lazy="password" type="password" class="w-full border-2 rounded-md h-10 px-4" placeholder="Insert Password">
                     </div>
                     {{-- ini akhir untuk form email password --}}
 
